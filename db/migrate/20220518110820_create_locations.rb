@@ -8,6 +8,7 @@ class CreateLocations < ActiveRecord::Migration[7.0]
       t.string      :country_flag_emoji_unicode
       t.string      :calling_code
       t.boolean     :is_eu
+      t.belongs_to  :geolocation
       t.timestamps
     end
   end

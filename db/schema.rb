@@ -35,8 +35,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_18_111556) do
     t.string "code"
     t.string "name"
     t.string "native"
+    t.bigint "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_languages_on_location_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -47,8 +49,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_18_111556) do
     t.string "country_flag_emoji_unicode"
     t.string "calling_code"
     t.boolean "is_eu"
+    t.bigint "geolocation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["geolocation_id"], name: "index_locations_on_geolocation_id"
   end
 
 end

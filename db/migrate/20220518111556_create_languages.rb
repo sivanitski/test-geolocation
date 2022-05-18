@@ -4,6 +4,7 @@ class CreateLanguages < ActiveRecord::Migration[7.0]
       t.string      :code
       t.string      :name
       t.string      :native
+      t.belongs_to  :location
       t.timestamps
     end
   end
