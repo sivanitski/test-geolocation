@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :geolocations, only: [:create, :update, :show, :destroy]
+  post '/geolocations', to: 'geolocations#create'
+  get 'geolocations', to: 'geolocations#show'
+  delete 'geolocations', to: 'geolocations#destroy'
 end

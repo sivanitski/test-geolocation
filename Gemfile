@@ -47,5 +47,6 @@ group :development do
   # gem "spring"
 end
 
-# API Client
+# API
 gem 'rest-client'
+gem 'jsonapi-serializer'
