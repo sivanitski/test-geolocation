@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_18_111556) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_19_084234) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "geolocations", force: :cascade do |t|
     t.string "ip"
-    t.string "type"
     t.string "continent_code"
     t.string "continent_name"
     t.string "country_code"
